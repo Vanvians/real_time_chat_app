@@ -7,6 +7,7 @@ import { SocketService } from "./socket.service";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit, OnDestroy {
+
   public messages: Array<any>;
   public chatBox: string;
 
@@ -47,4 +48,5 @@ export class AppComponent implements OnInit, OnDestroy {
   public isSystemMessage(message: string) {
     return message.startsWith("/") ? "<strong>" + message.substring(1) + "</strong>" : message;
   }
+
 }
